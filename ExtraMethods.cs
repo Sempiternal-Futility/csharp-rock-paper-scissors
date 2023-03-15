@@ -27,7 +27,7 @@ class ExtraMethods
 	DrawASCII.DrawPaper(0, 0);
 	DrawASCII.DrawRock(50, -11);
 	DrawASCII.DrawScissors(94, -10);
-
+/*
 	Console.ForegroundColor = ConsoleColor.Cyan;
 
 	Console.WriteLine(); Console.WriteLine(); Console.WriteLine();
@@ -39,6 +39,11 @@ class ExtraMethods
        ███      ███                                       ███      ███                                      ███      ███			
     			  ");
 
+*/
+
+	DrawASCII.DrawBracket(7, 4, "white");
+	DrawASCII.DrawBracket(57, -5, "darkgray");
+	DrawASCII.DrawBracket(108, -5, "darkblue");
 
 	//DRAWS THE MARKER IN THE FIRST PAIR OF BRACKETS
 	DrawMarker(12, 24);
@@ -57,7 +62,7 @@ class ExtraMethods
 
 	//THE " + 2" IS HERE BECAUSE THE MARKER STRING IS 2 CHARS LONG, SO THIS EVEN THINGS OUT
 	(int Left, int Top) paperPos = (12 + 2, 24);
-	(int Left, int Top) rockPos = (63 + 2, 24);
+	(int Left, int Top) rockPos = (62 + 2, 24);
 	(int Left, int Top) scissorsPos = (113 + 2, 24);
 
         var readInput = Console.ReadKey(true).Key;
@@ -78,20 +83,20 @@ class ExtraMethods
 
 	//MOVEMENTS "IFs"
 	if ( readInput == ConsoleKey.D && currentPos == paperPos )
-	{ EraseMarker(12, 24); DrawMarker(63, 24); }
+	{ EraseMarker(12, 24); DrawMarker(62, 24); }
 
   
 
 	if ( readInput == ConsoleKey.D && currentPos == rockPos )
-	{ EraseMarker(63, 24); DrawMarker(113, 24); }
+	{ EraseMarker(62, 24); DrawMarker(113, 24); }
 
 	if ( readInput == ConsoleKey.A && currentPos == rockPos )
-	{ EraseMarker(63, 24); DrawMarker(12, 24); }
+	{ EraseMarker(62, 24); DrawMarker(12, 24); }
 
 
 
 	if ( readInput == ConsoleKey.A && currentPos == scissorsPos )
-	{ EraseMarker(113, 24); DrawMarker(63, 24); }
+	{ EraseMarker(113, 24); DrawMarker(62, 24); }
 
       }
 
@@ -111,7 +116,7 @@ class ExtraMethods
     { 
 
          Console.SetCursorPosition(posX, posY);
-	 Console.ForegroundColor = ConsoleColor.Cyan;;
+	 Console.ForegroundColor = ConsoleColor.Cyan;
 	 Console.Write("██");
    
     }

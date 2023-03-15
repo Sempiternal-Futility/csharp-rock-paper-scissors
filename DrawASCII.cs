@@ -7,7 +7,7 @@ class DrawASCII
     public static void DrawPaper( int posXSum, int posYSum )
     { 
 
-        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.ForegroundColor = ConsoleColor.White;
 
         int posX = Console.CursorLeft + posXSum;
 	int posY = Console.CursorTop + posYSum;
@@ -19,43 +19,43 @@ class DrawASCII
 
 	Console.CursorLeft = posX;
 	Console.CursorTop = posY + 1;
-	Console.WriteLine("  ████  █████████  █████ ");
+	Console.WriteLine("  ████  ████████████████ ");
 
 	Console.CursorLeft = posX;
 	Console.CursorTop = posY + 2;
-	Console.WriteLine("  ██  ██               ██");
+	Console.WriteLine("  ███████████████████████");
 
 	Console.CursorLeft = posX;
 	Console.CursorTop = posY + 3;
-	Console.WriteLine("  ██                  ██ ");
+	Console.WriteLine("  ██████████████████████ ");
 
 	Console.CursorLeft = posX;
 	Console.CursorTop = posY + 4;
-	Console.WriteLine(" ██                   ██ ");
+	Console.WriteLine(" ███████████████████████ ");
 
 	Console.CursorLeft = posX;
 	Console.CursorTop = posY + 5;
-	Console.WriteLine("  ██                  ██ ");
+	Console.WriteLine("  ██████████████████████ ");
 
 	Console.CursorLeft = posX;
 	Console.CursorTop = posY + 6;
-	Console.WriteLine("  ██                 ██  ");
+	Console.WriteLine("  █████████████████████  ");
 
 	Console.CursorLeft = posX;
 	Console.CursorTop = posY + 7;
-	Console.WriteLine("   ██                  ██");
+	Console.WriteLine("   ██████████████████████");
 
 	Console.CursorLeft = posX;
 	Console.CursorTop = posY + 8;
-	Console.WriteLine("  ██                  ██ ");
+	Console.WriteLine("  ██████████████████████ ");
 
 	Console.CursorLeft = posX;
 	Console.CursorTop = posY + 9;
-	Console.WriteLine("   ██     ██          █  ");
+	Console.WriteLine("   ████████████████████  ");
 
 	Console.CursorLeft = posX;
 	Console.CursorTop = posY + 10;
-	Console.WriteLine("  ████████  ███████████  ");
+	Console.WriteLine("  █████████  ███████████ ");
 
     }
 
@@ -64,7 +64,7 @@ class DrawASCII
     public static void DrawRock( int posXSum, int posYSum )
     { 
 
-        Console.ForegroundColor = ConsoleColor.Gray;
+        Console.ForegroundColor = ConsoleColor.DarkGray;
 
         int posX = Console.CursorLeft + posXSum;
 	int posY = Console.CursorTop + posYSum;
@@ -120,43 +120,119 @@ class DrawASCII
     public static void DrawScissors( int posXSum, int posYSum )
     { 
 
-        Console.ForegroundColor = ConsoleColor.DarkBlue;         
+        Console.ForegroundColor = ConsoleColor.Red;
+
+	int posX = Console.CursorLeft + posXSum;
+	int posY = Console.CursorTop + posYSum;
+
+
+	//DRAWS BLADE OF THE SCISSORS
+	Console.ForegroundColor = ConsoleColor.Gray;
+	
+	Console.CursorLeft = posX;
+	Console.CursorTop = posY;
+	Console.WriteLine("");
+
+	Console.CursorLeft = posX;
+	Console.CursorTop = posY + 1;
+	Console.WriteLine("              ███");
+
+	Console.CursorLeft = posX;
+	Console.CursorTop = posY + 2;
+	Console.WriteLine("         ██████  ");
+
+	Console.CursorLeft = posX;
+	Console.CursorTop = posY + 3;
+	Console.WriteLine("███████████      ");
+
+	Console.CursorLeft = posX;
+	Console.CursorTop = posY + 4;
+	Console.WriteLine("   ███████       ");
+
+	Console.CursorLeft = posX;
+	Console.CursorTop = posY + 5;
+	Console.WriteLine("         ██████  ");
+
+	Console.CursorLeft = posX;
+	Console.CursorTop = posY + 6;
+	Console.WriteLine("              ███");
+
+	Console.CursorLeft = posX;
+	Console.CursorTop = posY + 7;
+	Console.WriteLine("");
+
+
+
+
+	//DRAWS THE HANDLE OF THE SCISSORS
+	Console.ForegroundColor = ConsoleColor.DarkBlue;
+	posX = posX + 17;
+
+	Console.CursorLeft = posX;
+	Console.CursorTop = posY;
+	Console.WriteLine("█████████████ ");
+
+	Console.CursorLeft = posX;
+	Console.CursorTop = posY + 1;
+	Console.WriteLine("█           ██");
+
+	Console.CursorLeft = posX;
+	Console.CursorTop = posY + 2;
+	Console.WriteLine("█           ██");
+
+	Console.CursorLeft = posX;
+	Console.CursorTop = posY + 3;
+	Console.WriteLine(" ████████████ ");
+
+	Console.CursorLeft = posX;
+	Console.CursorTop = posY + 4;
+	Console.WriteLine("");
+
+	Console.CursorLeft = posX;
+	Console.CursorTop = posY + 5;
+	Console.WriteLine("█████████████ ");
+
+	Console.CursorLeft = posX;
+	Console.CursorTop = posY + 6;
+	Console.WriteLine("█           ██");
+
+	Console.CursorLeft = posX;
+	Console.CursorTop = posY + 7;
+	Console.WriteLine("█████████████ ");
+
+
+
+    }
+
+    public static void DrawBracket( int posXSum, int posYSum, string color )
+    { 
+
+        if ( color == "white") { Console.ForegroundColor = ConsoleColor.White; }
+	if ( color == "darkgray") { Console.ForegroundColor = ConsoleColor.DarkGray; }
+	if ( color == "darkblue" ) { Console.ForegroundColor = ConsoleColor.DarkBlue; }
 
 	int posX = Console.CursorLeft + posXSum;
 	int posY = Console.CursorTop + posYSum;
 
 	Console.CursorLeft = posX;
 	Console.CursorTop = posY;
-	Console.WriteLine("                 █████████████ ");
+	Console.WriteLine("███      ███");
 
 	Console.CursorLeft = posX;
 	Console.CursorTop = posY + 1;
-	Console.WriteLine("              ████           ██");
+	Console.WriteLine("██        ██");
 
 	Console.CursorLeft = posX;
 	Console.CursorTop = posY + 2;
-	Console.WriteLine("         ██████  █           ██");
+	Console.WriteLine("██        ██");
 
 	Console.CursorLeft = posX;
 	Console.CursorTop = posY + 3;
-	Console.WriteLine("███████████       ████████████ ");
+	Console.WriteLine("██        ██");
 
 	Console.CursorLeft = posX;
 	Console.CursorTop = posY + 4;
-	Console.WriteLine("   ███████                     ");
-
-	Console.CursorLeft = posX;
-	Console.CursorTop = posY + 5;
-	Console.WriteLine("         ██████  █████████████ ");
-
-	Console.CursorLeft = posX;
-	Console.CursorTop = posY + 6;
-	Console.WriteLine("              ████           ██");
-
-	Console.CursorLeft = posX;
-	Console.CursorTop = posY + 7;
-	Console.WriteLine("                 █████████████ ");
-
+	Console.WriteLine("███      ███");
 
     }
 	    

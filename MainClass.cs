@@ -3,6 +3,8 @@
 class MainClass : ExtraMethods
 { 
 
+    //TODO: Make so that each selectoin bracket matches the color of the symbol
+
     static void Main()
     { 
 
