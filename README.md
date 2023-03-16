@@ -2,4 +2,4 @@
 
 HEAD TO THE RELEASES SECTION ON THIS VERY WEB PAGE :)
 
-<img src="/Z:\Pictures/to/rockpapersicsosrs-screenshot.png" >
+![Example](Z:/Pictures/rockpapersicsosrs-screenshot.png)
