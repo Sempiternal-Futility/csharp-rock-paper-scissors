@@ -27,19 +27,6 @@ class ExtraMethods
 	DrawASCII.DrawPaper(0, 0);
 	DrawASCII.DrawRock(50, -11);
 	DrawASCII.DrawScissors(94, -10);
-/*
-	Console.ForegroundColor = ConsoleColor.Cyan;
-
-	Console.WriteLine(); Console.WriteLine(); Console.WriteLine();
-	Console.WriteLine(@"
-       ███      ███                                       ███      ███                                      ███      ███ 
-       ██        ██                                       ██        ██                                      ██        ██ 
-       ██        ██                                       ██        ██                                      ██        ██ 
-       ██        ██                                       ██        ██                                      ██        ██ 
-       ███      ███                                       ███      ███                                      ███      ███			
-    			  ");
-
-*/
 
 	DrawASCII.DrawBracket(7, 4, "white");
 	DrawASCII.DrawBracket(57, -5, "darkgray");
@@ -134,13 +121,48 @@ class ExtraMethods
         Console.WriteLine(); Console.WriteLine(); Console.WriteLine(); Console.WriteLine();
 
 	if ( aiMove == 0 )
-	{ Console.WriteLine("AI USED PAPER"); }
+	{ 
+	
+	     if ( playerMove == 0 )
+	     { DrawASCII.PlayerVSAI("paper", "paper"); }
+
+	     else if ( playerMove == 1 )
+	     { DrawASCII.PlayerVSAI("rock", "paper"); }
+
+	     else if ( playerMove == 2 )
+	     { DrawASCII.PlayerVSAI("scissors", "paper"); }
+
+	
+	}
 
 	if ( aiMove == 1 ) 
-	{ Console.WriteLine("AI USED ROCK"); }
+	{ 
+	        
+             if ( playerMove == 0 )
+	     { DrawASCII.PlayerVSAI("paper", "rock"); }
+
+	     if ( playerMove == 1 )
+	     { DrawASCII.PlayerVSAI("rock", "rock"); }
+
+	     if ( playerMove == 2)
+	     { DrawASCII.PlayerVSAI("scissors", "rock"); }
+	         
+
+	}
 
 	if ( aiMove == 2 )
-	{ Console.WriteLine("AI USED SCISSORS"); }
+	{ 
+	
+             if ( playerMove == 0 )
+	     { DrawASCII.PlayerVSAI("paper", "scissors"); }
+
+	     if ( playerMove == 1 )
+	     { DrawASCII.PlayerVSAI("rock", "scissors"); }
+
+	     if ( playerMove == 2 )
+	     { DrawASCII.PlayerVSAI("scissors", "scissors"); }
+
+	}
 
 	Console.ReadKey(true);
 

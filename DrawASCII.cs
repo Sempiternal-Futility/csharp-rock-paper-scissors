@@ -235,5 +235,122 @@ class DrawASCII
 	Console.WriteLine("███      ███");
 
     }
+
+    private static void DrawVS( int posXSum, int posYSum )
+    { 
+
+         Console.ForegroundColor = ConsoleColor.Cyan;
+
+	 int posX = Console.CursorLeft + posXSum;
+	 int posY = Console.CursorTop + posYSum;
+
+	 Console.CursorLeft = posX;
+	 Console.CursorTop = posY;
+	 Console.WriteLine("██              ██     ███ ");
+
+	 Console.CursorLeft = posX;
+	 Console.CursorTop = posY + 1;
+	 Console.WriteLine(" ██            ██     ██   ");
+
+	 Console.CursorLeft = posX;
+	 Console.CursorTop = posY + 2;
+	 Console.WriteLine("  ██          ██     ██    ");
+
+	 Console.CursorLeft = posX;
+	 Console.CursorTop = posY + 3;
+	 Console.WriteLine("   ██        ██     ██     ");
+
+	 Console.CursorLeft = posX;
+	 Console.CursorTop = posY + 4;
+	 Console.WriteLine("    ██      ██       ██    ");
+
+	 Console.CursorLeft = posX;
+	 Console.CursorTop = posY + 5;
+	 Console.WriteLine("     ██    ██          ██  ");
+
+	 Console.CursorLeft = posX;
+	 Console.CursorTop = posY + 6;
+	 Console.WriteLine("      ██  ██             ██");
+
+	 Console.CursorLeft = posX;
+	 Console.CursorTop = posY + 7;
+	 Console.WriteLine("       ████          █████ ");
+
+
+
+    }
+
+    public static void PlayerVSAI( string playerMove, string AIMove )
+    { 
+
+         Console.Clear();
+
+         if ( playerMove == "paper" && AIMove == "paper")
+	 {
+              
+              DrawPaper(0, 0); DrawVS(35, 0);  DrawPaper(70, 0);
+
+	 }
+
+	 else if ( playerMove == "paper" && AIMove == "rock")
+	 { 
+
+             DrawPaper(0, 0); DrawVS(35, 0); DrawRock(70, 0);
+	 
+	 }
+
+	 else if ( playerMove == "paper" && AIMove == "scissors")
+	 { 
+	 
+             DrawPaper(0, 0); DrawVS(35, 0); DrawScissors(70, 0);
+
+	 }
+
+
+
+	 else if ( playerMove == "rock" && AIMove == "paper")
+	 { 
+
+	     DrawRock(0, 0); DrawVS(35, 0); DrawPaper(70, 0);
+	 
+	 }
+
+	 else if ( playerMove == "rock" && AIMove == "rock")
+	 { 
+
+	    DrawRock(0, 0); DrawVS(35, 0); DrawRock(70, 0);
+	 
+	 }
+
+	 else if ( playerMove == "rock" && AIMove == "scissors")
+	 { 
+
+            DrawRock(0, 0); DrawVS(35, 0); DrawScissors(70, 0);
+	 
+	 }
+
+
+
+	 else if ( playerMove == "scissors" && AIMove == "paper")
+	 { 
+
+             DrawScissors(0, 0); DrawVS(35, 0); DrawPaper(70, 0);
+	 
+	 }
+
+	 else if ( playerMove == "scissors" && AIMove == "rock" )
+	 { 
+
+            DrawScissors(0, 0); DrawVS(35, 0); DrawRock(70, 0);
+	 
+	 }
+
+	 else if ( playerMove == "scissors" && AIMove == "scissors")
+	 { 
+
+            DrawScissors(0, 0); DrawVS(35, 0); DrawScissors(70, 0);
+	 
+	 }
+    }
 	    
 }
